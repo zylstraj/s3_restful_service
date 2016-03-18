@@ -1,0 +1,38 @@
+{
+  "name": "s3_restful_service",
+  "version": "0.1.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.2.44",
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.7"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.0.0",
+    "gulp-mocha": "^2.2.0",
+    "jshint": "^2.9.1",
+    "jshint-stylish": "^2.1.0"
+  },
+  "scripts": {
+    "test": "gulp",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jalynnlim/s3_restful_service.git"
+  },
+  "author": "Jamie Lim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jalynnlim/s3_restful_service/issues"
+  },
+  "homepage": "https://github.com/jalynnlim/s3_restful_service#readme"
+}
