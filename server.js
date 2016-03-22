@@ -5,12 +5,13 @@ let app = express();
 let router = express.Router();
 let bodyParser = require('body-parser');
 let mongoose = require('mongoose');
-let config = require(__dirname + '/config/env.js');
+let config = require(__dirname + '/config/env');
+
 
 require(__dirname + '/routes/files-routes.js')(router);
 require(__dirname + '/routes/users-routes.js')(router);
 
-mongoose.connect(config.MONGOLAB_URI);
+mongoose.connect(config.DB_PORT);
 app.use(bodyParser.json());
 app.use('/', router);
 

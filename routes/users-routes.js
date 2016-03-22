@@ -1,5 +1,7 @@
 'use strict';
-
+let AWS = require('aws-sdk')
+let mongoose = require('mongoose');
+let bodyParser = require('body-parser');
 let User = require(__dirname + '/../models/User.js');
 
 module.exports = (router) => {
@@ -11,10 +13,14 @@ module.exports = (router) => {
       });
     })
     .post((req, res) => {
-      var newUser = new User(req.body);
+      var newUser = new User({
+        username: req.body.username,
+        files: []
+      });
+      console.log(req.body);
       newUser.save((err, user) => {
         if (err) return res.send(err);
-        res.json(user);
+        res.json({msg: 'New User created'});
       });
     });
 

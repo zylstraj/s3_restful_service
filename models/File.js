@@ -1,8 +1,11 @@
 'use strict';
 
-const mongoose = require('mongoose');
-const fileSchema = new mongoose.Schema({
-  // TO DO
-});
-
-module.exports = mongoose.model('File', fileSchema);
+module.exports = (mongoose, models) => {
+  let fileSchema = new mongoose.Schema({
+    name: String,
+    url: String,
+    content: String
+  });
+  let File = mongoose.model('File', fileSchema);
+  models.File = File;
+};
